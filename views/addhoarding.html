@@ -1,0 +1,41 @@
+<html>
+    <body>
+<script>
+        var url = window.location.href.split("?");
+        console.log(url[1]);
+        var kar = url[1].split('&');
+        var hello1=(kar[0].split('='))[1];
+        var hello2=(kar[1].split('='))[1];
+    console.log(11111,hello1);
+    console.log(22222,hello2);
+    var latitude = parseFloat(hello1);
+    var longitude = parseFloat(hello2);
+    console.log(1111,latitude);
+    </script>
+<script>
+var publisher_charge = document.getElementById('publisher_charges'); 
+var hoard_charge = (publisher_charge)*(0.15) + publisher_charge; 
+
+</script>
+        
+<form action="/app/publishers/addhoarding" method="post">
+Location Of Hoarding : <br/>
+<input type='text' id="lati" name='latitude'>  <input type='text' id="loti" name='longitude'> <br/>
+Landmark Of Hoarding : <br/>
+<input type='text' name='landmark' placeholder='popular place near the hoarding'>
+Size Of Hoarding : <br/>
+<input type='text' name='height' placeholder='Enter Height'> <input type='text' name='width' placeholder='Enter Width'><br/>
+Type Of Hoarding :<br/>
+<input type='text' name='type' placeholder='Type of Hoarding'><br/>
+Charge Of Hoarding : <br/>
+<input type='text' name='pub_charge' id='publisher_charges' placeholder='Your Charge For Hoarding'><br/>
+<input type='hidden' name='charge' id ='hoard_charge'>
+<input type='submit' value='submit'>
+</form>
+        <script>
+        console.log(latitude,longitude);
+        document.getElementById('lati').value= latitude;
+        document.getElementById('loti').value= longitude;
+        document.getElementById('hoard_charge').value = hoard_charge; </script>
+        </body>
+</html>

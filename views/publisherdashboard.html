@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <% include commonHeadElements.html %>
+</head>
+
+<body class="header-fixed header-fixed-space">
+    <div class="wrapper homePage">
+
+        <% include header.html %>
+<center>
+        <h3>
+          Home Page</h3>
+<br><br>
+
+ <% for(var i in userDetails) { %>
+   <p>
+  <%= userDetails[i].image_url %><br>
+  Start Date is <%= userDetails[i].start_date %><br>
+End Date is  <%= userDetails[i].end_date %><br>
+Type of Hoarding is  <%= userDetails[i].type %><br>
+Latitude  <%= userDetails[i].latitude %><br>
+Longitude  <%= userDetails[i].longitude %><br>
+Height  <%= userDetails[i].height %><br>
+Width  <%= userDetails[i].width %><br>
+Charge is  <%= userDetails[i].charge %><br>
+Payment Status is <%= userDetails[i].payment_status %><br>
+</p> <% } %>
+</center><br>
+<br><br>
+
+        <% include footer.html %>
+    </div>
+<% include commonFooterScriptElements.html %>
+</body>
+</html>

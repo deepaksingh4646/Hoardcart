@@ -1,0 +1,93 @@
+<html>
+<head>
+  <style>
+  body{
+    background:#eee;
+
+}
+.search-result .title h3 {
+    margin: 0 0 15px;
+    color: #333;
+}
+.search-result .title p {
+    font-size: 12px;
+    color: #333;
+}
+.well {
+    border: 0;
+    padding: 20px;
+    min-height: 63px;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 3px;
+    position: relative;
+    max-height: 100000px;
+    border-bottom: 2px solid #ccc;
+    transition: max-height 0.5s ease;
+    -o-transition: max-height 0.5s ease;
+    -ms-transition: max-height 0.5s ease;
+    -moz-transition: max-height 0.5s ease;
+    -webkit-transition: max-height 0.5s ease;
+}
+.form-control {
+    height: 45px;
+    padding: 10px;
+    font-size: 16px;
+    box-shadow: none;
+    border-radius: 0;
+    position: relative;
+}
+
+  </style>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+<div class="container bootstrap snippet">
+    <hr>
+
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    		<div class="well search-result">
+
+        	</div>
+            <div class="well search-result">
+              <% for(var i in searchQuery){ %>
+            	<div class="row">
+            		<a href="#">
+                		<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+	                    	<img class="img-responsive" src="https://lorempixel.com/400/200/sports/2/" alt="">
+                		</div>
+                		<div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
+	                    	<h3><%= searchQuery[i].landmark %></h3>
+	                    	<p>Ut quis libero id orci semper porta ac vel ante. In nec laoreet sapien. Nunc hendrerit ligula at massa sodales, ullamcorper rutrum orci semper.</p>
+                		</div>
+            		</a>
+            	</div>
+              <% } %>
+
+              <% for(var j in searchResult){ %>
+              <div class="row">
+                <a href="#">
+                    <div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+                        <img class="img-responsive" src="https://lorempixel.com/400/200/sports/2/" alt="">
+                    </div>
+                    <div class="col-xs-6 col-sm-9 col-md-9 col-lg-10 title">
+                        <h3><%= searchResult[j].landmark %></h3>
+                        <p>Ut quis libero id orci semper porta ac vel ante. In nec laoreet sapien. Nunc hendrerit ligula at massa sodales, ullamcorper rutrum orci semper.</p>
+                    </div>
+                </a>
+              </div>
+              <% } %>
+
+
+
+            </div>
+
+
+            	</div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

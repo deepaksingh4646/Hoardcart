@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <% include commonHeadElements.html %>
+</head>
+
+<body class="header-fixed header-fixed-space">
+    <div class="wrapper homePage">
+        <div style="color:white;background-color : blue; font-size : large;text-align:center;">Hoarding.Com</div><br/>
+
+        <% include header.html %>
+        <p>Image Url Of  Hoarding Is : <b style="color:green"><%= anubhav.image_url %></b></p>
+                <hr/>
+            <p>Hoarding Type Is : <b style="color:red"><%= anubhav.type %></b></p>
+                <hr/>
+    <p>Latitude Is : <b style="color:red">
+     <%= anubhav.latitude %></b>
+</p>
+        <hr/>
+            <p> Longitude Is : <b style="color:red">
+                <%= anubhav.longitude %>
+                    </b>
+</p>       
+     <hr/>
+            <p>Charge Of Hoarding Is : <b style="color:red"><%= anubhav.charge %></b></p>
+                <hr/>
+            <p>Start Date Of  Hoarding Is : <b style="color:red"><%= anubhav.start_date %></b></p>
+                <hr/>
+            <p>End Date Of  Hoarding Is : <b style="color:red"><%= anubhav.end_date %></b></p>
+                <hr/>
+ 
+
+        <% include footer.html %>
+    </div>
+<% include commonFooterScriptElements.html %>
+</body>
+</html>

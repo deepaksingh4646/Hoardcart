@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include commonHeadElements.html %>
+    <style>
+    .navbar {
+     background-color: #225c9d !important;
+        }
+    .block-parallax-1 {
+    overflow: hidden;
+    position: relative;
+}
+.block-parallax-1 .parallax-bg {
+    background-attachment: fixed;
+    background-image: url('/static/images/Site Image/banner.jpg');
+    background-position: 0px 0px;
+    background-repeat: repeat;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    min-width: 1170px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+.block-parallax-1 .md-box {
+    padding: 200px 0 200px;
+    background: rgba(0, 0, 0, 0.75);
+    position: relative;
+    height: 100%;
+    text-align: center;
+}
+.block-parallax-1 .md-box h1 {
+    color: #fff;
+}
+
+.block-parallax-2 .parallax-bg {
+	background-image: url('/static/images/Site Image/banner.jpg');
+}
+.form-control { width:45% !important; }
+#srch-term1 { margin-right:5px }
+
+.searchpar {
+display : inline-block;
+background: #fff;
+height: 60px;
+border-bottom: 1px solid #dfdddd;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+position: relative;
+}
+.searchpar_place {
+    color: #464444;
+    float: left;
+    width: 266px;
+    height: 60px;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+.searchpar_landmark {
+   color: #464444;
+    /* float: left; */
+    height: 60px;
+    border-left: 1px solid #dfdddd;
+    position: relative;
+    /* margin-left: 5px; */
+    padding-left: 8px;
+}
+.searchpar_button {
+background-color: #EE2E24;
+    color: #fff;
+    float: right;
+    width: 107px;
+    height: 60px;
+    /* padding-top: 20px; */
+    /* box-sizing: border-box; */
+    text-align: center;
+    cursor: pointer;
+}
+.blockdesc {
+color : #EE2E24;
+border : 2px solid #225c9d;
+display : block;
+height : 60px;
+text-transform : capatilize;
+font-weight : bold;
+}
+.footer-copyright {
+    background-color: black;
+        }
+.hoardcart-desc {
+    background: #FFFFFF;
+    padding: 30px 0;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: 1;
+    }
+.row-anubhav {
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}
+.footer-row-modified {
+background-color : black;
+}
+.page-footer, .page-footer a  {
+color : #dedfe6;
+}
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-primary navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">HoardCart.Com</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/app/advertisers">Advertiser</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/app/publishers">Publisher</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Company</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="/app/contact">Contact Us</a>
+      </li>
+    <li class="nav-item">
+        <a class="btn btn-outline-success" href="/app/login">Log In</a>
+      </li>&nbsp;
+    <li class="nav-item">
+        <a class="btn btn-outline-primary" href="/app/register">Sign Up</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<section class="block-parallax-1  block-parallax-2">
+    <div class="parallax-bg"></div>
+    <div class="md-box">
+         <div class='searchpar'><form action="/app/search" method="GET">
+    <input type="search" class='searchpar_place' id="txtPlaces"/>
+    <input type='search' class='searchpar_landmark' name='mark' placeholder="Landmark">
+    <input type="date" class='searchpar_place' name='sdate' placeholder="Start Date">
+    <input type="date" class='searchpar_place' name='edate' placeholder="End Date">
+    <input type="hidden" id='myLat' name="lat">
+    <input type="hidden" id='myLng' name="lon">
+    <input type="submit" class='searchpar_button' value="Submit" />
+    </form>
+                    </div>
+    </div>
+</section>
+    <div class='blockdesc'>Top Hoarding In HoardCart.Com</div>
+<p> Best Hoardings</p><br/>
+<table border="1">
+            <tr>
+                <% for(var i in userList) { %>
+<p>
+<td>
+    <%= userList[i].image_url %><br>
+        <%= userList[i].landmark %>
+        </p>
+        <% } %>
+            </td>
+        </tr>
+        </table>
+<div class='conatiner'>
+<div class='hoardcart-desc'>
+    <div class='row-anubhav'>
+    <div class='col'>
+        <h3>24/7 Customer Support</h3>
+        <p>A dedicated 24x7 customer support team always at your service to help solve any problem</p></div>
+        <div class='col'><h3>Timely Performance Delivered</h3>
+        <p>Everything you have always needed to catch attention for your business anytime anywhere</p></div>
+        <div class='col'><h3>Top Rated Publisher-Partners</h3>
+            <p>All our publisher-partners are background verified and trained to deliver only the best experience</p></div></div></div></div>
+
+<footer class="page-footer font-small unique-color-dark">
+    <div style="background-color: #225c9d;">
+      <div class="container">
+        <div class="row py-4 d-flex align-items-center">
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+            <a class="fb-ic">
+              <i class="fa fa-facebook white-text mr-4"> </i>
+            </a>
+            <a class="tw-ic">
+              <i class="fa fa-twitter white-text mr-4"> </i>
+            </a>
+            <a class="gplus-ic">
+              <i class="fa fa-google-plus white-text mr-4"> </i>
+            </a>
+            <a class="li-ic">
+              <i class="fa fa-linkedin white-text mr-4"> </i>
+            </a>
+            <a class="ins-ic">
+              <i class="fa fa-instagram white-text"> </i>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid text-center text-md-left footer-row-modified">
+      <div class="row">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold my-2">HoardCart</h6>
+          <p>Hoardcart is a best place for offline advertisment. we provide you best functionality to book and publish your hoarding by a simple steps..</p>
+
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold my-2">Locations</h6>
+          <p>
+            <a href="#!">Hoarding In Etah</a>
+          </p>
+          <p>
+            <a href="#!">Hoarding In Agra</a>
+          </p>
+          <p>
+            <a href="#!">Hoarding In Delhi</a>
+          </p>
+          <p>
+            <a href="#!">Hoarding In Mathura</a>
+          </p>
+
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold my-2">Useful links</h6>
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">Become an Affiliate</a>
+          </p>
+          <p>
+            <a href="#!">Hoarding Rates</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <h6 class="text-uppercase font-weight-bold my-2">Contact</h6>
+          <p>
+            <i class="fa fa-home mr-3"></i> Aliganj ,Etah ,Uttar Pradesh(India) </p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i></p>
+          <p>
+            <i class="fa fa-phone mr-3"></i></p>
+          <p>
+            <i class="fa fa-print mr-3"></i> </p>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="/"> Deepak singh Creation !!</a>
+    </div>
+</footer>
+
+<% include commonMapfiles.html %>
+<% include commonFooterScriptElements.html %>
+</body>
+</html>
